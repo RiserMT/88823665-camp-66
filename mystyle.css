@@ -1,0 +1,101 @@
+h1 {
+    color: rgba(93, 59, 218, 0.863);
+    font-size: 50pt;
+    border: 7px solid rgb(0, 0, 0);
+    border-radius: 5em;
+    margin-bottom: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto; 
+    margin-right: auto;
+    background-image: url(https://media.tenor.com/KYx0oOETylUAAAAj/fluffy-mane-lion.gif),url(https://media.tenor.com/QmeEGUiVrI8AAAAj/cute.gif);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: left, right;
+}
+
+h1:hover {
+    background-color: gray;
+}
+
+body {
+    font-family: 'Itim';
+    font-size: 25px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input:hover{
+    background-color: rgb(156, 156, 156, 0.507);
+    color: rgb(0, 0, 0);
+}
+
+textarea:hover{
+    background-color: rgba(156, 156, 156, 0.507);
+    color: rgb(0, 0, 0);
+}
+
+input[type="radio"]:hover ,input[type="checkbox"]:hover{
+    outline: 3px solid rgb(255, 73, 73);
+    cursor: pointer;
+}
+
+select[type="select"]:hover{
+    background-color: rgb(255, 73, 73);
+}
+
+input:focus{
+    outline: none;
+    border: 3px solid rgb(255, 73, 73);
+}
+
+textarea:focus{
+    outline: none;
+    border: 3px solid rgb(255, 73, 73);
+}
+
+select[type="select"]:focus{
+    outline: none;
+    border: 3px solid rgb(255, 73, 73);
+}
+
+input[type="reset"], input[type="submit"] {
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    margin-left: 220px;
+}
+
+input[type="text"], input[type="date"], input[type="number"] {
+    width: 150px;
+    height: 20px;
+    font-size: 15px;
+    padding: 5px;
+}
+textarea {
+    font-size: 15px;
+}
+select {
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: 15px; 
+    height: 15px; 
+}
+
+input[type="file"] {
+    font-size: 16px; 
+    padding: 10px 1px; 
+    height: 20px;
+    cursor: pointer; 
+}
