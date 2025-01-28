@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use function PHPUnit\Framework\isEmpty;
-
 class Mycontroller extends Controller
 {
     private function myprivate(){
