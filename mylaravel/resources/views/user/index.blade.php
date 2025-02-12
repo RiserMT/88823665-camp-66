@@ -26,7 +26,7 @@
                     <a href="{{ url('/user/'.$user->id)}} ">
                         <button class="btn btn-warning">Edit</button>
                     </a>
-                    <form action="{{ url('/user') }}" method="post" style="display: inline;">
+                    <form action="{{ url('/user') }}" method="post" style="display: inline;" onsubmit="confirm_delete(event)">
                         @csrf
                         @method('delete')
                         <input type="hidden" name="id" value="{{ $user->id }}">
@@ -49,7 +49,35 @@
           </ul>
         </div>
       </div>
+      <button class="btn" onclick="confirm_delete()">Click Me</button>
       <!-- /.card -->
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    <script>
+        function confirm_delete(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then(function (result){
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your file has been deleted.",
+                        icon: "success"
+                    }).then(() => {
+                        event.target.closest("form").submit();
+                    });
+                }
+            });
+        }
+    </script>
 @endsection
